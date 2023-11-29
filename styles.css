@@ -1,0 +1,455 @@
+/* Variables */
+:root {
+    --blue-color: #0071F5;
+    --white-color: #F5F5F5;
+    --grey-color:  #b6b4b4;
+    --dark-blue-color: #004AA0;
+    --background-color: #030C1D;
+  }
+
+/* All page styles */
+
+body {
+    height: 100vh;
+    margin: 0;
+    margin-top: 5vw;
+    padding: 0;
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--background-color);
+    color: var(--white-color)
+}
+
+header{
+    background-color: var(--background-color);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 10px 10px rgba(0, 0, 0, 0.22);
+    min-height: 5vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+
+}
+
+h2{
+    font-size: 3vw;
+    color: var(--white-color);
+    padding: 3vw;
+    text-decoration: underline;
+}
+
+h3{
+    font-size: 2vw;
+    padding: 2vw;
+    padding-bottom: 0;
+
+}
+
+p{
+    padding: 2vw;
+    padding-top: 0;
+}
+
+button{
+    font-size: 2vw;
+    color: #F5F5F5;
+    padding: 1vw 3vw;
+    border-radius: 2vw;
+    background-color: #0071F5;
+    
+    border: solid 0px;
+    margin: 2vw;
+
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+}
+
+
+/* Header Styles */
+
+nav {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+
+}
+
+.logo-container {
+    position: absolute;
+    left: 0%;
+}
+
+.logo-container img{
+    height: 10vh;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 4vw;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 1vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--blue-color);
+    transition: width 0.2s ease-in-out;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.log-in-button {
+    position: absolute;
+    right: 0%;
+}
+
+.log-in-button button {
+    font-size: 1vw;
+    padding: 0.4vw 1.5vw;
+}
+
+#header{
+    width: 100vw;
+}
+
+
+/* Button Styles */
+
+#button_style_2:hover {
+    transform: translateY(-5px);
+    background-color: #004AA0;
+  }
+
+
+#button_style_2{
+border-radius: 5vw;
+}
+
+#button_style_1{
+    background-color:  rgba(52, 152, 219, 0.0);
+    border-radius: 5vw;
+    position: relative;
+
+}
+
+#button_style_1::before, #button_style_1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 5vw;
+    z-index: -1;
+}
+
+#button_style_1::before {
+    background-color: #0071F5;
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 3vw #030C1D;
+    }
+
+#button_style_1:hover::before {
+box-shadow: inset 0 0 0 1px #0071F5
+}
+
+#button_style_1::after {
+    box-shadow: inset 0 0 0 1px #0071F5;
+}
+
+.buttons{
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Multi Tab Styles */
+
+
+.hide-text{
+    display: none;
+}
+
+#tabs{
+    padding: 1vw 0;
+}
+
+#text-image-content{
+    margin: 0;
+    border: solid 2px var(--white-color);
+    background-color: var(--white-color);
+    color: var(--background-color);
+    font-size: 1.5vw;
+    height: 30vw;
+}
+
+#text-image-content p{
+    padding: 2vw;
+    padding-top: 1vw;
+}
+
+
+#tabs button {
+    position: relative;
+    width: 14vw;
+    border-radius: 1vw 1vw 0 0;
+    margin: 0.1vw;
+    margin-bottom: 0;
+    background-color: var(--grey-color);
+    font-size: 1.5vw;
+    padding: 0.5vw 0;
+    padding-bottom: 0.3vw;
+    color: var(--background-color);
+    transition: all 0.3s ease-in-out;
+}
+
+#tabs button::before {
+content: "";
+position: absolute;
+background-color: transparent;
+bottom: 0;
+left: -14vw;
+height: 1vw;
+width: 14vw;
+border-bottom-right-radius: 25px;
+box-shadow: 25px 0 0 0 transparent;
+z-index: 0;
+}
+
+#tabs button::after {
+content: "";
+position: absolute;
+background-color: transparent;
+bottom: -0;
+left: 14vw;
+height: 1vw;
+width: 14vw;
+border-bottom-left-radius: 25px;
+box-shadow: -25px 0 0 0 transparent;
+z-index: 0;
+}
+
+#tabs button:hover {
+    background-color: var(--white-color);
+
+}
+
+#tabs button.active {
+    padding-top: 0.8vw;
+    background-color: var(--white-color);
+    
+}
+
+#tabs button.active::before {
+    box-shadow: 25px 0 0 0 var(--white-color);
+    z-index: 2;
+}
+
+#tabs button.active::after {
+    box-shadow: -25px 0 0 0 var(--white-color);
+    z-index: 2;
+}
+
+#splitted_img {
+    width: 80vw;
+    height: 30vw;
+    background-color: #004AA0;
+    background-image: url("./media/split_image.jpg");
+    background-size: cover;
+    
+    
+    transition: all 0.5s ease-in-out;
+}
+
+#splitted_img.blurred {
+    filter: blur(50px);
+}
+
+#splitted_img.recruits{
+    float: left;
+    clip-path: polygon(0 0, 50% 0, 40% 100%, 0 100%);
+    shape-outside: polygon(0 0, 53% 0, 43% 100%, 0 100%);
+}
+
+#splitted_img.firms {
+    float: right;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 60% 100%);
+    shape-outside: polygon(47% 0%, 100% 0%, 100% 100%, 57% 100%);
+}
+
+
+
+/* Header Styles */
+
+.image-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.paragraph-background-left{
+    height: 80vh;
+    margin: 0;
+}
+
+#Lorem1{
+    color: var(--background-color);
+    font-size: 1.5vw;
+    text-align: left;
+    background-color: #FFF;
+}
+
+.paragraph-background-right{
+    height: 80vh;
+    margin: 0;
+    color:#FFF;
+}
+
+#image1{
+    background-image: url(./bank_stock.png);
+    background-size: cover;
+}
+
+
+
+.flex-4{
+    flex: 4;
+}
+
+.flex-6{
+    flex: 6;
+}
+
+
+
+.container{
+    min-height: 100vh;
+    text-align:right;
+    color:#FFF;
+    font-weight:bold;
+    position: relative;
+}
+
+.container h2{
+    position: absolute;
+    top: 20%; /* Adjust the vertical position */
+    left: 60%; /* Adjust the horizontal position */
+    text-align: left;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 4vw;
+}
+
+.section-1{
+    background-image:url(./media/list_of_banks.jpg);
+    background-size: cover;
+    background-position:center;
+}
+
+
+
+.fourth {
+    border: solid 4px var(--blue-color);
+    background-color: transparent;
+    background-image: linear-gradient(45deg, var(--blue-color) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 500%;
+    transition: background-position 500ms ease-in-out, transform 0.5s ease-in-out; background-color:  0.8s ease-in-out;
+    border-radius: 7vw;
+}
+.fourth:hover { 
+    background-position: 0;
+    transform: scale(0.97);
+    background-color: #0071F5;
+}
+  
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(3vw);
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+.animation-left{
+    transform: translateY(0);
+    transform: translateX(-30vw);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+
+.animation-right{
+    transform: translateY(0);
+    transform: translateX(30vw);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0);
+
+}
+
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.btn:hover, .btn:focus {
+color: #fff;
+outline: 0;
+}
+
+.fourth {
+border-color: #f1c40f;
+color: #fff;
+background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+background-position: 100%;
+background-size: 400%;
+transition: background 300ms ease-in-out;
+}
+.fourth:hover {
+background-position: 0;
+}
+
