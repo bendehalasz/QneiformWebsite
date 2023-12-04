@@ -6,7 +6,7 @@ var velocity = 2;
 function update() {
     var pos = window.scrollY;
 
-    document.querySelectorAll('.container').forEach(function(element) {
+    document.querySelectorAll('.scrollable-container').forEach(function(element) {
         // Subtract some from the height because of the padding
         var height = element.clientHeight - 18;
         element.style.backgroundPosition = '50% ' + Math.round((height - pos) * velocity) + 'px';
@@ -14,6 +14,10 @@ function update() {
 }
 
 window.addEventListener('scroll', update);
+
+//SECTIONS
+
+//todo
 
 
 //REVEAL ANIMATION
@@ -126,3 +130,42 @@ const firmsText = document.getElementById('text-firms');
 
             }
         }
+
+// TOGGLE SWITCH
+
+function toggleSwitchChanged() {
+    var toggleSwitch = document.getElementById("toggleSwitch");
+    if (toggleSwitch.checked) {
+      // Method to execute when the switch is ON
+      console.log("Switch is ON");
+      methodWhenSwitchIsOn();
+    } else {
+      // Method to execute when the switch is OFF
+      console.log("Switch is OFF");
+      methodWhenSwitchIsOff();
+    }
+  }
+
+  function methodWhenSwitchIsOn() {
+
+    const toggle_switch = document.getElementById("toggle-switch")
+    toggle_switch.style.backgroundColor = "#0071F5";
+
+    const tilted_line = document.getElementById("tilted_line")
+    tilted_line.classList.add("tilted")
+
+    // Implement your logic when the switch is ON
+    setForHiringFirms();
+  }
+
+  function methodWhenSwitchIsOff() {
+
+    const toggle_switch = document.getElementById("toggle-switch")
+    toggle_switch.style.backgroundColor = "#ccc";
+
+    const tilted_line = document.getElementById("tilted_line")
+    tilted_line.classList.remove("tilted")
+    // Implement your logic when the switch is OFF
+    setForRecruits();
+  }
+

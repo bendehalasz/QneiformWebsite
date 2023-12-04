@@ -5,35 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap">
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="tabs_styles.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 
     <header>
-        <nav>
+        <nav class="topnav" id="myTopnav">
             <div class="logo-container">
                 <a href="#about"><img src="./media//qneiform_logo_final_Logo-Picto-White.png" alt="Logo"></a>
             </div>
             <ul class="menu">
-                <li><a href="#about">About</a></li>
+                <li><a  href="#about">About</a></li>
                 <li><a href="#insights">Insights</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="active" href="#contact">Contact</a></li>
             </ul>
             <div class="log-in-button">
                 <a  href="./login/login.html"><button>Login</button></a>
             </div>
         </nav>
+
+        <div class="navbar-container">
+            <nav role="navigation">
+              <div id="menuToggle">
+                <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              <ul id="menu">
+                <li><a class="active" href="#about">About</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+             </div>
+            </nav>
     </header>
+
+
+        
+        </div>
+
 
     <section id="about">
 
-    <div id="tabs">
-        <button id="recruits" class="active" onclick="setForRecruits()">For recruits</button>
-        <button id="firms" onclick="setForHiringFirms()">For hiring firms</button>
+    <div class="logo-slogan-container">
+        <div class="column-img"><img id="logo-slogan" src="./media/qneiform_logo_final_Logo-Slogan-White.png" alt=""></div>
+
+        <div class="column-button"><button>Book a Demo</button></div>
+    </div>
+
+    <div class="about-description">
+
+        <div id="description">
+            <p>
+                Sometimes a web page's text content appears to be funneling your attention
+                towards a spot on the page to drive you to follow a particular link.
+                Sometimes you don't notice.
+                Sometimes a web page's text content appears to be funneling your attention
+                towards a spot on the page to drive you to follow a particular link.
+                Sometimes you don't notice.
+            </p>
+        </div>
+
+        <img id="macbook_mockup" src="./media/macbook_mockup.png" alt="">
+
+    </div>
+
+    <div class="scrollable-container">
+        <h2>We cover 230<br>Investment Banks</h2>
+    </div>
+
+    
+
+
+
+    <div class="toggle-line-container">
+
+        <div class="toggle-switch-container">
+            <label for="toggleSwitch" class="toggle-switch-label">
+              <div id="toggle-switch" class="toggle-switch">
+                <input type="checkbox" id="toggleSwitch" onchange="toggleSwitchChanged()">
+                <div class="toggle-switch-slider"></div>
+              </div>
+            </label>
+        </div>
+
+        <div class="vertical-line" id="tilted_line"></div>
 
         <div id="text-image-content">
             <div class="recruits" id="splitted_img"></div>
@@ -77,75 +137,9 @@
                 towards a spot on the page to drive you to follow a particular link.
                 Sometimes you don't notice.
             </p>
-
-            
-
-
             
         </div>
     </div>
-
-
-
-    <div class="image-text-container">
-
-
-        <div class="hidden animation-left flex-6 paragraph-background-left" id="Lorem1">
-
-            <h3>Lorem ipsum dolor sit</h3>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel quam non risus ultricies pulvinar. Suspendisse sit amet eros sit amet risus tempor rutrum id in lorem. Vivamus tempor posuere turpis nec vehicula. Proin eget accumsan mi, non interdum urna. Nulla in libero tincidunt sapien porta interdum. Nunc ligula ex, tincidunt non pretium id, malesuada et augue. Pellentesque quis tincidunt ex. Fusce eleifend tristique orci, ut tristique enim porttitor at. Nulla ac auctor risus.
-
-                Mauris rhoncus massa sit amet sollicitudin dapibus. In porttitor mi metus, eget condimentum augue pulvinar et. Aenean semper, nunc in pharetra egestas, elit urna ullamcorper enim, ornare vehicula ligula ligula sit amet quam. Aliquam scelerisque varius imperdiet. Nullam bibendum, velit sed vestibulum accumsan, purus tortor dictum mauris, ac sollicitudin odio eros non elit. Proin commodo magna nulla, at fringilla massa pharetra ac. Duis nec nulla lorem. Nam ligula purus, sagittis vitae facilisis ac, dignissim a nibh. Nullam ipsum elit, pharetra eget mauris ac, ornare sagittis ex. Proin ut scelerisque mauris. Suspendisse id tortor a elit mollis sagittis. Aenean congue, neque eget vestibulum dictum, nunc nunc tincidunt tellus, ac pellentesque risus nunc malesuada diam. Nam hendrerit sit amet purus sed ullamcorper.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel quam non risus ultricies pulvinar. Suspendisse sit amet eros sit amet risus tempor rutrum id in lorem. Vivamus tempor posuere turpis nec vehicula. Proin eget accumsan mi, non interdum urna. Nulla in libero tincidunt sapien porta interdum. Nunc ligula ex, tincidunt non pretium id, malesuada et augue. Pellentesque quis tincidunt ex. Fusce eleifend tristique orci, ut tristique enim porttitor at. Nulla ac auctor risus.
-
-                Mauris rhoncus massa sit amet sollicitudin dapibus. In porttitor mi metus, eget condimentum augue pulvinar et. Aenean semper, nunc in pharetra egestas, elit urna ullamcorper enim, ornare vehicula ligula ligula sit amet quam. Aliquam scelerisque varius imperdiet. Nullam bibendum, velit sed vestibulum accumsan, purus tortor dictum mauris, ac sollicitudin odio eros non elit. Proin commodo magna nulla, at fringilla massa pharetra ac. Duis nec nulla lorem. Nam ligula purus, sagittis vitae facilisis ac, dignissim a nibh. Nullam ipsum elit, pharetra eget mauris ac, ornare sagittis ex. Proin ut scelerisque mauris. Suspendisse id tortor a elit mollis sagittis. Aenean congue, neque eget vestibulum dictum, nunc nunc tincidunt tellus, ac pellentesque risus nunc malesuada diam. Nam hendrerit sit amet purus sed ullamcorper.</p>
-        </div>
-
-        <div class="hidden animation-right flex-4 paragraph-background-right" id="image1">
-
-        </div>
-
-    </div>
-
-    
-
-
-    <div class="container section-1">
-        <h2>We cover 230<br>Investment Banks</h2>
-    </div>
-
-    <div class="image-text-container">
-
-
-        <div class="hidden animation-left flex-4 paragraph-background-left" id="image1">
-
-            
-
-        </div>
-
-        <div class="hidden animation-right flex-6 paragraph-background-right" id="Lorem1">
-            <h3>Lorem ipsum dolor sit</h3>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel quam non risus ultricies pulvinar. Suspendisse sit amet eros sit amet risus tempor rutrum id in lorem. Vivamus tempor posuere turpis nec vehicula. Proin eget accumsan mi, non interdum urna. Nulla in libero tincidunt sapien porta interdum. Nunc ligula ex, tincidunt non pretium id, malesuada et augue. Pellentesque quis tincidunt ex. Fusce eleifend tristique orci, ut tristique enim porttitor at. Nulla ac auctor risus.
-
-                Mauris rhoncus massa sit amet sollicitudin dapibus. In porttitor mi metus, eget condimentum augue pulvinar et. Aenean semper, nunc in pharetra egestas, elit urna ullamcorper enim, ornare vehicula ligula ligula sit amet quam. Aliquam scelerisque varius imperdiet. Nullam bibendum, velit sed vestibulum accumsan, purus tortor dictum mauris, ac sollicitudin odio eros non elit. Proin commodo magna nulla, at fringilla massa pharetra ac. Duis nec nulla lorem. Nam ligula purus, sagittis vitae facilisis ac, dignissim a nibh. Nullam ipsum elit, pharetra eget mauris ac, ornare sagittis ex. Proin ut scelerisque mauris. Suspendisse id tortor a elit mollis sagittis. Aenean congue, neque eget vestibulum dictum, nunc nunc tincidunt tellus, ac pellentesque risus nunc malesuada diam. Nam hendrerit sit amet purus sed ullamcorper.</p>
-
-        </div>
-
-    </div>
-
-    </section>
-
-
-
-
-    <section id="insights" class="hidden"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel quam non risus ultricies pulvinar. Suspendisse sit amet eros sit amet risus tempor rutrum id in lorem. Vivamus tempor posuere turpis nec vehicula. Proin eget accumsan mi, non interdum urna. Nulla in libero tincidunt sapien porta interdum. Nunc ligula ex, tincidunt non pretium id, malesuada et augue. Pellentesque quis tincidunt ex. Fusce eleifend tristique orci, ut tristique enim porttitor at. Nulla ac auctor risus.
-
-    Mauris rhoncus massa sit amet sollicitudin dapibus. In porttitor mi metus, eget condimentum augue pulvinar et. Aenean semper, nunc in pharetra egestas, elit urna ullamcorper enim, ornare vehicula ligula ligula sit amet quam. Aliquam scelerisque varius imperdiet. Nullam bibendum, velit sed vestibulum accumsan, purus tortor dictum mauris, ac sollicitudin odio eros non elit. Proin commodo magna nulla, at fringilla massa pharetra ac. Duis nec nulla lorem. Nam ligula purus, sagittis vitae facilisis ac, dignissim a nibh. Nullam ipsum elit, pharetra eget mauris ac, ornare sagittis ex. Proin ut scelerisque mauris. Suspendisse id tortor a elit mollis sagittis. Aenean congue, neque eget vestibulum dictum, nunc nunc tincidunt tellus, ac pellentesque risus nunc malesuada diam. Nam hendrerit sit amet purus sed ullamcorper.
-    
-    Integer accumsan posuere lorem sit amet pharetra. Fusce et metus nulla. Morbi sed turpis vel libero convallis laoreet. In fringilla imperdiet luctus. In hac habitasse platea dictumst. Nullam a erat eros. Mauris eget aliquam dui, vitae porta purus.</p></section>
-
 
 
 </body>
