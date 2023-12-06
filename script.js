@@ -17,7 +17,47 @@ window.addEventListener('scroll', update);
 
 //SECTIONS
 
-//todo
+
+
+
+
+//Scroll HIGHLIGHT
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    function highlightNavbarLink() {
+        const sections = document.querySelectorAll('section');
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+            const offset = section.offsetTop;
+            const height = section.offsetHeight;
+
+            if (window.scrollY >= offset - 80 && window.scrollY < offset + height) {
+                currentSectionId = section.id;
+            }
+        });
+
+        document.querySelectorAll('#menu-desktop li a').forEach(menuItem => {
+            menuItem.classList.remove('active');
+        });
+
+        document.querySelectorAll('#menu-mobile li a').forEach(menuItem => {
+            menuItem.classList.remove('active');
+        });
+
+        document.querySelector(`#menu-desktop li a[href="#${currentSectionId}"]`).classList.add('active');
+
+        document.querySelector(`#menu-mobile li a[href="#${currentSectionId}"]`).classList.add('active');
+    
+    }
+
+
+    highlightNavbarLink();
+
+    window.addEventListener('scroll', highlightNavbarLink);
+
+});
 
 
 //REVEAL ANIMATION

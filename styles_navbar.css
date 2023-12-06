@@ -6,38 +6,35 @@
     --light-blue: #cfd8e2;
     --dark-blue-color: #004AA0;
     --background-color: #030C1D;
-
-    --navbar-height: 80px;
-    --navbar-height-mobile: 40px;
   }
 
 
-.navbar-container
+.navbar-mobile
 {
-    opacity: 0;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
-    width: 50vw;
-    height: 100%;
+    width: 60vw;
+    height: 100vh;
     overflow: hidden;
-    z-index: 10;
+    z-index: 2;
 }
 
 @media screen and (max-width: 720px) {
-    .navbar-container
-{
-    opacity: 1;
-   
-}
+    .navbar-mobile
+    {
+        display: block;
+      
+    }
 }
  
  #menuToggle {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 22px;
+    right: 14px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -49,8 +46,8 @@
     width: 40px;
     height: 32px;
     position: absolute;
-    top: 0;
-    right: 5%;
+    top: -12px;
+    right: -8px;
     cursor: pointer;
     opacity: 0;
     z-index: 2;
@@ -99,12 +96,11 @@
     transform: rotate(-45deg) translate(0, -1px);
   }
   
-  #menu
+  #menu-mobile
   {
     position: absolute;
-    width: 180px;
-    height: 400px;
-    box-shadow: 0 0 10px #85888C;
+    width: 60vw;
+    height: 100vh;
     margin: -50px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -116,7 +112,7 @@
     
   }
 
-  #menu a{
+  #menu-mobile a{
     text-decoration: none;
     color: var(--background-color);
     font-weight: bold;
@@ -125,7 +121,7 @@
 
   }
 
-  #menu a::after {
+  #menu-mobile a::after {
     content: "";
     display: block;
     position: absolute;
@@ -138,21 +134,21 @@
     z-index: -2;
 }
 
-#menu a:hover::after {
+#menu-mobile a:hover::after {
     width: 100%;
 }
 
-#menu a.active::after {
+#menu-mobile a.active::after {
     width: 100%;
 }
 
-#menu a.active {
+#menu-mobile a.active {
     color: var(--blue-color);
 }
 
 
   
-  #menu li
+  #menu-mobile li
   {
     padding: 10px 0;
     transition-delay: 2s;
@@ -160,5 +156,5 @@
   
   #menuToggle input:checked ~ ul
   {
-    transform: translate(-30%, 0);
+    transform: translate(-40%, 0);
   }

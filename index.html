@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Qneiform - talent, deciphered</title>
+    <link rel="icon" href="./media/qneiform_logo_final_Logo-Picto-White.png" type="image/x-icon">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap">
@@ -14,47 +16,48 @@
 <body>
 
     <header>
-        <nav class="topnav" id="myTopnav">
+        <nav class="navbar-desktop">
             <div class="logo-container">
                 <a href="#about"><img src="./media//qneiform_logo_final_Logo-Picto-White.png" alt="Logo"></a>
             </div>
-            <ul class="menu">
+            <ul id="menu-desktop">
                 <li><a  href="#about">About</a></li>
                 <li><a href="#insights">Insights</a></li>
-                <li><a class="active" href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="log-in-button">
                 <a  href="./login/login.html"><button>Login</button></a>
             </div>
         </nav>
 
-        <div class="navbar-container">
+        <div class="navbar-mobile">
             <nav role="navigation">
               <div id="menuToggle">
                 <input type="checkbox" />
                   <span></span>
                   <span></span>
                   <span></span>
-              <ul id="menu">
-                <li><a class="active" href="#about">About</a></li>
+              <ul id="menu-mobile">
+                <li><a href="#about">About</a></li>
                 <li><a href="#insights">Insights</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
              </div>
             </nav>
+        </div>
     </header>
 
-
-        
-        </div>
 
 
     <section id="about">
 
-    <div class="logo-slogan-container">
-        <div class="column-img"><img id="logo-slogan" src="./media/qneiform_logo_final_Logo-Slogan-White.png" alt=""></div>
 
-        <div class="column-button"><button>Book a Demo</button></div>
+    <div class="center-container">
+        <div class="logo-slogan-container">
+            <div class="column-img"><img id="logo-slogan" src="./media/qneiform_logo_final_Logo-Slogan-White.png" alt=""></div>
+
+            <div class="column-button"><button>Book a Demo</button></div>
+        </div>
     </div>
 
     <div class="about-description">
@@ -70,7 +73,8 @@
             </p>
         </div>
 
-        <img id="macbook_mockup" src="./media/macbook_mockup.png" alt="">
+        <div><img id="macbook_mockup" src="./media/macbook_mockup.png" alt=""></div>
+        
 
     </div>
 
@@ -140,6 +144,22 @@
             
         </div>
     </div>
+
+    </section>
+
+    <section id="insights">
+        <h2>INSIGHTS</h2>
+
+
+    </section>
+
+    <section id="contact">
+        <h2>CONTACT</h2>
+
+
+    </section>
+
+
 
 
 </body>
