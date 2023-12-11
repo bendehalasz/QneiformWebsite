@@ -4,6 +4,7 @@
     --white-color: #F5F5F5;
     --grey-color:  #b6b4b4;
     --light-blue: #cfd8e2;
+    --light-blue-gradient: #8faccc;
     --dark-blue-color: #004AA0;
     --background-color: #030C1D;
 
@@ -12,11 +13,15 @@
   }
 
 
-
-#insights{
-    height: 2000px;
-    background-color: #f1c40f;
+@media (prefers-color-scheme: dark) {
+    #light-icon {
+        display: none;
+    }
+    #dark-icon {
+        display: block;
+    }
 }
+
 
 #contact{
     height: 2000px;
@@ -72,7 +77,8 @@ button{
     padding: 1vw 3vw;
     border-radius: 2vw;
     background-color: #0071F5;
-    
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.315);
+    font-weight: 500;
     border: solid 0px;
     margin: 2vw;
 
@@ -80,10 +86,12 @@ button{
 
 }
 
+
 button:hover {
-    transform: translateY(-5px);
+    /*transform: translateY(-5px);*/
     background-color: #004AA0;
   }
+  
 
 
 /* Header Styles */
@@ -153,9 +161,9 @@ nav {
 }
 
 .log-in-button button {
-    font-size: 16px;
-    padding: 6px 12px;
-    border-radius: 14px;
+    font-size: 1.2vw;
+    padding: 0.5vw 1vw;
+    border-radius: 1.4vw;
 }
 
 #header{
@@ -171,6 +179,7 @@ nav {
 @media screen and (max-width: 720px) {
 
     .log-in-button button {
+        display: none;
         font-size: 14px;
         padding: 8px 12px;
         border-radius: 15px;
@@ -253,16 +262,20 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 /* Logo-section Styles */
 
+
+
 .center-container
 {
-    height: 80vh;
-    background-image: url("./media/background_shapes_zoomed.png");
-    background-size: cover;
+    height: 40vw;
+
+    background-image: url("./media/background_shapes_dark.png");
     background-attachment: fixed;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+
 
     display: flex;
     justify-content: center;
@@ -283,26 +296,46 @@ box-shadow: inset 0 0 0 1px #0071F5
     padding: 2vw;
 }
 
+.column-button p {
+    text-align: left;
+    font-size: 2vw;
+    padding: 1vw 2vw;
+    margin: 0;
+}
+
+.column-button h2 {
+    text-align: left;
+    text-decoration: none;
+    font-size: 3vw;
+    padding: 1vw 2vw;
+    margin: 0;
+}
+
+.column-button #colored-text {
+    font-weight: bold;
+    background-image: linear-gradient(45deg,  var(--white-color), var(--blue-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 50% 50%;
+    margin: 0;
+}
+
 .column-button{
     flex: 5;
-    text-align: center;
-    padding: 2vw;
-
+    padding: 3.5vw;
 }
 
-.column-button button{
-    font-weight: bold;
-}
 
 #logo-slogan{
-    width: 40vw;
+    width: 35vw;
 }
 
 @media screen and (max-width: 768px) {
 
 
     .center-container{
-        height: 40vh;
+        height: 100vw;
     }
     .logo-slogan-container {
         flex-direction: column;
@@ -346,12 +379,37 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 }
 
+/* Center Tile*/
+
+.center-tile{
+    text-align: center;
+    padding: 5vw 15vw;
+    background-color: var(--light-blue);
+    background: linear-gradient(-20deg,  var(--light-blue), var(--light-blue-gradient));
+}
+.center-tile p{
+    color: var(--background-color);
+    font-size: 2vw;
+    font-weight: 500;
+    background-image: linear-gradient(45deg,  var(--background-color), var(--dark-blue-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+
+.center-tile button{
+    margin: 0;
+    margin-top: 2vw;
+}
+
 
 /* About Description Section Styles */
 
 .about-description{
     background-color: var(--light-blue);
-    padding: 5vw;
+    background: linear-gradient(0deg,  var(--light-blue), var(--light-blue-gradient));
+    padding: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -360,13 +418,17 @@ box-shadow: inset 0 0 0 1px #0071F5
 #description{
     flex: 5;
     color: var(--background-color);
-    font-size: 2vw;
+    font-size: 2.3vw;
 }
 
-#macbook_mockup{
-    flex: 5;
-    width: 40vw;
+#tilted-images{
+    flex: 3;
 }
+
+#tilted-images img{
+    width: 30vw;
+}
+
 
 @media screen and (max-width: 768px) {
     .about-description {
@@ -383,7 +445,7 @@ box-shadow: inset 0 0 0 1px #0071F5
     #macbook_mockup{
         order: 1;
         width: 80vw;
-        margin-top: 1vh;
+        margin-top: 1vw;
     }
 }
 
@@ -391,30 +453,50 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 
 .scrollable-container{
-    height: 80vh;
+    height: 50vw;
     color:#FFF;
     position: relative;
-    background-image:url(./media/list_of_banks_dark.jpg);
+    background-image:url(./media/list_of_client_logos.jpg);
     background-size: cover;
     background-position:center;
 }
 
-.scrollable-container h2{
+.scrollable-container #clients-text{
     font-weight:bold;
     padding: 0;
     position: absolute;
     top: 50%;
     right: 30%; 
-    transform: translate(50%, -100%);
-    text-align: left;
+    transform: translate(50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     text-decoration: none;
     color: #ffffff;
     font-size: 4vw;
 }
 
+.scrollable-container h2{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 4vw;
+    margin: 0;
+    padding: 1vw;
+}
+
+.scrollable-container p{
+    padding: 1vw;
+    margin: 0;
+
+}
+
+
 @media screen and (max-width: 768px) {
     .scrollable-container{
-        height: 60vh;
+        height: 80vw;
     }
 
     .scrollable-container h2{
@@ -442,13 +524,12 @@ box-shadow: inset 0 0 0 1px #0071F5
     width: 120px;
     height: 60px;
     border-radius: 30px;
-    
     cursor: pointer;
     margin-right: 10px;
   }
 
   #toggle-switch{
-      background-color: #ccc;
+      background-color: var(--dark-blue-color);
   }
 
   .toggle-switch input {
@@ -479,20 +560,126 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 /* Multi Tab Styles */
 
+.toggle-line-container
+{
+    background-color: var(--light-blue);
+    position: relative;
+    height: 30vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+.multiple-tabs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-color);
+    height: 30vw;
+}
+
+.multiple-tabs h2{
+    font-size: 3vw;
+    text-decoration: none;
+    padding: 1vw;
+    color: var(--background-color);
+    position: relative;
+
+}
+
+.multiple-tabs h2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: var(--blue-color);
+    transition: width 0.2s ease-in-out;
+    z-index: 0;
+}
+
+.multiple-tabs p{
+    padding: 1vw;
+    padding-top: 0;
+}
+
+#firms-side{
+    flex: 5;
+    padding: 2vw;
+    padding-left: 7vw;
+    font-size: 1.8vw;
+    position: relative;
+    height: 30vw;
+}
+
+#firms-side.blur::after {
+    opacity: 1;
+}
+
+#firms-side::after {
+    content: "For Hiring Firms";
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #cfd8e244;
+    backdrop-filter: blur(25px); /* Adjust the blur strength as needed */
+    filter: blur(0);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+
+
+
+
+#recruiters-side{
+    flex: 5;
+    padding: 2vw;
+    padding-right: 7vw;
+    font-size: 1.8vw;
+    position: relative;
+    height: 30vw;
+}
+
+#recruiters-side.blur::after {
+
+    opacity: 1;
+}
+
+
+#recruiters-side::after {
+    content: "For Recruiters";
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #cfd8e244;
+    backdrop-filter: blur(25px); /* Adjust the blur strength as needed */
+    filter: blur(0);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
 
 .hide-text{
     display: none;
 }
 
-.toggle-line-container
-{
-    background-color: var(--light-blue);
-    position: relative;
-    width: 100vw;
-    height: 80vh;
-    margin: auto;
-    overflow: hidden;
-}
+
 
 #text-image-content p{
     padding: 2vw;
@@ -503,10 +690,10 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 #splitted_img {
     width: 100vw;
-    height: 80vh;
-    background-color: #004AA0;
-    background-image: url("./media/split_image.jpg");
-    background-size: cover;    
+    height: 40vw;
+    background-color: var(--light-blue);
+    /*background-image: url("./media/split_image.jpg");
+    background-size: cover;   */ 
     transition: all 0.5s ease-in-out;
 }
 
@@ -529,11 +716,11 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 .vertical-line {
     position: absolute;
-    height: 120vh;
+    height: 60vw;
     width: 8px;
     background-color: var(--blue-color);
     left: 50%;
-    top: -20vh;
+    top: -10vw;
     transform: translate(-50%, -50%);
     transform-origin: center;
     transform: rotate(15deg);
@@ -613,28 +800,36 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 .hidden {
     opacity: 0;
-    transform: translateY(3vw);
-    transition: all 1s;
-    transition-delay: 0.5s;
 }
 .animation-left{
     transform: translateY(0);
-    transform: translateX(-30vw);
-    transition: all 0.5s;
-    transition-delay: 0.5s;
+    transform: translateX(-5vw);
+    transition: all 0.8s ease-in-out;
+    transition-delay: 0s;
 }
 
 .animation-right{
     transform: translateY(0);
-    transform: translateX(30vw);
-    transition: all 0.5s;
-    transition-delay: 0.5s;
+    transform: translateX(5vw);
+    transition: all 0.8s ease-in-out;
+    transition-delay: 0s;
+}
+
+.animation-up{
+    transform: translateY(3vw);
+    transition: all 0.8s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.animation-down{
+    transform: translateY(-3vw);
+    transition: all 0.8s ease-in-out;
+    transition-delay: 0.3s;
 }
 .show{
     opacity: 1;
     transform: translateY(0);
     transform: translateX(0);
-
 }
 
 

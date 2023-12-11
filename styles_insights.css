@@ -1,0 +1,32 @@
+:root {
+    --blue-color: #0071F5;
+    --white-color: #F5F5F5;
+    --grey-color:  #b6b4b4;
+    --light-blue: #cfd8e2;
+    --light-blue-gradient: #8faccc;
+    --dark-blue-color: #004AA0;
+    --background-color: #030C1D;
+  }
+
+
+#cards-container {
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    padding: 10vw;
+}
+
+
+.card{
+    width: 20vw;
+    height: 30vw;
+    background-color: var(--background-color);
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.315);
+    border-radius: 1vw;
+    margin: 3vw;
+    transition: all 0.5 ease-in-out;
+}
+
+.card:hover{
+    background-color: var(--dark-blue-color);
+}

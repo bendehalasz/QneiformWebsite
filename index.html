@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qneiform - talent, deciphered</title>
-    <link rel="icon" href="./media/qneiform_logo_final_Logo-Picto-White.png" type="image/x-icon">
+    <link rel="icon" href="./media/qneiform_logo_final_Logo-Picto-Black.png" id="light-scheme-icon">
+    <link rel="icon" href="./media/qneiform_logo_final_Logo-Picto-White.png" id="dark-scheme-icon">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">   
     <link rel="stylesheet" href="styles_navbar.css">
+    <link rel="stylesheet" href="styles_insights.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +20,7 @@
     <header>
         <nav class="navbar-desktop">
             <div class="logo-container">
-                <a href="#about"><img src="./media//qneiform_logo_final_Logo-Picto-White.png" alt="Logo"></a>
+                <a href="#about"><img src="./media/qneiform_logo_final_Logo-Typo-White.png" alt="Logo"></a>
             </div>
             <ul id="menu-desktop">
                 <li><a  href="#about">About</a></li>
@@ -54,36 +56,64 @@
 
     <div class="center-container">
         <div class="logo-slogan-container">
-            <div class="column-img"><img id="logo-slogan" src="./media/qneiform_logo_final_Logo-Slogan-White.png" alt=""></div>
 
-            <div class="column-button"><button>Book a Demo</button></div>
+            <div class="column-button">
+                <h2>Talent is complicated.</h2>
+                <p>Yet most technology firms still think innovation 
+                    in this space means tinkering with CRM… </p>
+                <p id="colored-text">We’re different</p>
+
+                <button >Find out more</button>
+            </div>
+
+            <div class="column-img">
+                <img  id="logo-slogan" src="./media/qneiform_logo_final_Logo-Picto-White.png" alt="">
+                <!--<p>Most talent technology firms think innovation is about tinkering with CRM.
+                    We focus on what matters: finding the perfect candidate</p> -->
+            </div>
         </div>
+    
     </div>
 
-    <div class="about-description">
-
-        <div id="description">
-            <p>
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-            </p>
-        </div>
-
-        <div><img id="macbook_mockup" src="./media/macbook_mockup.png" alt=""></div>
+    <div class="center-tile" >
+        <p class="hidden animation-up">If you understand recruitment, you know all that 
+            matters is finding the very best candidates for a 
+            role. Anything else is like being a winemaker and 
+            prioritising the bottle over the grapes.</p>
         
-
-    </div>
-
-    <div class="scrollable-container">
-        <h2>We cover 230<br>Investment Banks</h2>
+        <button class="hidden animation-up">Request a trial</button>
     </div>
 
     
 
+    <div class="scrollable-container">
+        <div id="clients-text">
+            <h2>Our clients</h2>
+            <p>see the full list</h2>
+        </div>
+        
+    </div>
+
+
+    <div class="about-description">
+
+        <div id="description">
+            <p class="hidden animation-up">
+                We designed our platform to empower 
+                true professionals. Whether you’re an 
+                elite headhunter, or responsible for 
+                talent within a leading organisation, we 
+                can help you excel and generate more 
+                value than ever before.
+            </p>
+        </div>
+
+        <div id="tilted-images">
+            <img id="img-1" src="./media/macbook_mockup.png" alt="">
+        </div>
+        
+
+    </div>
 
 
     <div class="toggle-line-container">
@@ -91,64 +121,61 @@
         <div class="toggle-switch-container">
             <label for="toggleSwitch" class="toggle-switch-label">
               <div id="toggle-switch" class="toggle-switch">
-                <input type="checkbox" id="toggleSwitch" onchange="toggleSwitchChanged()">
+                <input type="checkbox" id="toggleSwitch" onchange="toggleSwitchChanged()" >
                 <div class="toggle-switch-slider"></div>
               </div>
             </label>
         </div>
 
-        <div class="vertical-line" id="tilted_line"></div>
+        
 
-        <div id="text-image-content">
-            <div class="recruits" id="splitted_img"></div>
-            <p id="text-firms" class="hide-text">
-                For hiring firms<br><br>Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
+        <!--
 
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
+            <div class="vertical-line" id="tilted_line"></div> 
+
+            <div id="text-image-content">
+            <div id="splitted_img"></div>
+            <p id="text-firms">
+                For Hiring Firms<br><br>
+                What if you could instantly benchmark teams against competitors and effortlessly identify the candidates you actually want to interview? We help talent teams transform their approach to hiring, either filling more roles directly, or maximising agency relationships to ensure the best possible hires and the highest ROI.   
             </p>
             <p id="text-recruits">
-                For recruits<br><br>Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
+                For Recruiters<br><br>
+                Imagine if your team had the entire market at their fingertips, on demand. We provide the most complete talent data and the most advanced search technology to enable your team to be the best versions of themselves - forming better relationships, completing more mandates, and generating more revenue than ever before.
 
-                Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.Sometimes a web page's text content appears to be funneling your attention
-                towards a spot on the page to drive you to follow a particular link.
-                Sometimes you don't notice.
             </p>
+        -->
+
+        <div class="multiple-tabs">
+
+
+            <div id="recruiters-side" >
+
+                <h2>For Recruiters</h2>
+                <p>Imagine if your team had the entire market at their fingertips, on demand. We provide the most complete talent data and the most advanced search technology to enable your team to be the best versions of themselves - forming better relationships, completing more mandates, and generating more revenue than ever before.</p>
+            </div>
+
+            <div id="firms-side" class="blur" >
+                <h2>For Hiring Firms</h2>
+                <p>What if you could instantly benchmark teams against competitors and effortlessly identify the candidates you actually want to interview? We help talent teams transform their approach to hiring, either filling more roles directly, or maximising agency relationships to ensure the best possible hires and the highest ROI.</p>
+            </div>
+
+            
             
         </div>
+
+
     </div>
 
     </section>
 
     <section id="insights">
-        <h2>INSIGHTS</h2>
+        
+        <div id="cards-container">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
 
 
     </section>

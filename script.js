@@ -15,13 +15,8 @@ function update() {
 
 window.addEventListener('scroll', update);
 
-//SECTIONS
 
-
-
-
-
-//Scroll HIGHLIGHT
+//SCROLL HIGHLIGHT
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -99,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function scrollToTarget(targetPosition) {
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
-        const duration = 1500; // Adjust this value for the scroll duration
+        const duration = 1000; // Adjust this value for the scroll duration
         let startTime;
 
         function animateScroll(currentTime) {
@@ -126,47 +121,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //BLUR ANIMATION
 
-const splittedImg = document.getElementById('splitted_img');
-const recruitsButton = document.getElementById('recruits');
-const firmsButton = document.getElementById('firms');
+//const splittedImg = document.getElementById('splitted_img');
+//const recruitsButton = document.getElementById('recruits');
+//const firmsButton = document.getElementById('firms');
 
-const recruitsText = document.getElementById('text-recruits');
-const firmsText = document.getElementById('text-firms');
+const recruitsText = document.getElementById('recruiters-side');
+const firmsText = document.getElementById('firms-side');
 
+        
+        
         function setForRecruits() {
-            if (!splittedImg.classList.contains('recruits')) {
-                splittedImg.classList.add('recruits', 'blurred');
-                splittedImg.classList.remove('firms');
-                setTimeout(() => {
-                    splittedImg.classList.remove('blurred');
-                }, 300);
-
-                recruitsButton.classList.add('active');
-                firmsButton.classList.remove('active');
-
-                recruitsText.classList.remove('hide-text');
-                firmsText.classList.add('hide-text');
-
-                
-
+            if (!firmsText.classList.contains('blur')) {
+                firmsText.classList.add('blur');
+                recruitsText.classList.remove('blur');
+  
 
             }
         }
 
         function setForHiringFirms() {
-            if (!splittedImg.classList.contains('firms')) {
-                splittedImg.classList.add('firms', 'blurred');
-                splittedImg.classList.remove('recruits');
-                setTimeout(() => {
-                    splittedImg.classList.remove('blurred');
-                }, 300);
-
-                firmsButton.classList.add('active');
-                recruitsButton.classList.remove('active');
-
-                recruitsText.classList.add('hide-text');
-                firmsText.classList.remove('hide-text');
-
+            if (!recruitsText.classList.contains('blur')) {
+                firmsText.classList.remove('blur');
+                recruitsText.classList.add('blur');
+  
 
             }
         }
@@ -191,8 +168,8 @@ function toggleSwitchChanged() {
     const toggle_switch = document.getElementById("toggle-switch")
     toggle_switch.style.backgroundColor = "#0071F5";
 
-    const tilted_line = document.getElementById("tilted_line")
-    tilted_line.classList.add("tilted")
+    //const tilted_line = document.getElementById("tilted_line")
+    //tilted_line.classList.add("tilted")
 
     // Implement your logic when the switch is ON
     setForHiringFirms();
@@ -201,11 +178,30 @@ function toggleSwitchChanged() {
   function methodWhenSwitchIsOff() {
 
     const toggle_switch = document.getElementById("toggle-switch")
-    toggle_switch.style.backgroundColor = "#ccc";
+    toggle_switch.style.backgroundColor = "#004AA0";
 
-    const tilted_line = document.getElementById("tilted_line")
-    tilted_line.classList.remove("tilted")
+    //const tilted_line = document.getElementById("tilted_line")
+    //tilted_line.classList.remove("tilted")
     // Implement your logic when the switch is OFF
     setForRecruits();
   }
 
+
+//FAVICON LIGHT DARK MODE
+
+matcher = window.matchMedia('(prefers-color-scheme: dark)');
+matcher.addListener(onUpdate);
+onUpdate();
+
+lightSchemeIcon = document.querySelector('link #light-scheme-icon');
+darkSchemeIcon = document.querySelector('link #dark-scheme-icon');
+
+function onUpdate() {
+  if (matcher.matches) {
+    lightSchemeIcon.remove();
+    document.head.append(darkSchemeIcon);
+  } else {
+    document.head.append(lightSchemeIcon);
+    darkSchemeIcon.remove();
+  }
+}
