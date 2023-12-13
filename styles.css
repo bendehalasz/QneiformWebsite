@@ -8,7 +8,7 @@
     --dark-blue-color: #004AA0;
     --background-color: #030C1D;
 
-    --navbar-height: 80px;
+    --navbar-height: 8vh;
     --navbar-height-mobile: 60px;
   }
 
@@ -24,8 +24,7 @@
 
 
 #contact{
-    height: 2000px;
-    background-color: #e74c3c
+    background-color: var(--light-blue);
 
 }
 
@@ -84,6 +83,23 @@ button{
 
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
+}
+
+@media screen and (max-width: 768px) {
+    button{
+        font-size: 4vw;
+        color: #F5F5F5;
+        padding: 2vw 6vw;
+        border-radius: 4vw;
+        background-color: #0071F5;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.315);
+        font-weight: 500;
+        border: solid 0px;
+        margin: 2vw;
+    
+        transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    
+    }
 }
 
 
@@ -161,8 +177,8 @@ nav {
 }
 
 .log-in-button button {
-    font-size: 1.2vw;
-    padding: 0.5vw 1vw;
+    font-size: 1.1vw;
+    padding: 0.4vw 1.2vw;
     border-radius: 1.4vw;
 }
 
@@ -316,10 +332,12 @@ box-shadow: inset 0 0 0 1px #0071F5
     background-image: linear-gradient(45deg,  var(--white-color), var(--blue-color));
     -webkit-background-clip: text;
     background-clip: text;
+    width: fit-content;
     color: transparent;
-    background-size: 50% 50%;
     margin: 0;
+    font-size: 2.5vw;
 }
+
 
 .column-button{
     flex: 5;
@@ -328,54 +346,64 @@ box-shadow: inset 0 0 0 1px #0071F5
 
 
 #logo-slogan{
-    width: 35vw;
+    width: 30vw;
 }
 
 @media screen and (max-width: 768px) {
 
 
     .center-container{
-        height: 100vw;
+        height: fit-content;
+        padding: 4vw;
     }
     .logo-slogan-container {
-        flex-direction: column;
         align-items: center;
     }
 
     .column-img{
-        flex: 1; 
-        width: 100vw;
-        text-align: center;
-        padding: 3vw;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: none;
     }
     
 
     .column-button {
-        flex: 1;
+        flex: 4;
         width: 100%;
-        text-align: center;
         padding: 3vw;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-    }
-
-    #logo-slogan{
-        width: 90vw;
-    }
-
-    .column-button button{
-        font-size: 20px;
-        padding: 10px 15px;
-        border-radius: 20px;
+        text-align: center;
 
     }
+    .column-button p {
+        text-align: center;
+        font-size: 6vw;
+        padding: 1vw 2vw;
+        margin: 0;
+    }
+    
+    .column-button h2 {
+        text-align: center;
+        text-decoration: none;
+        font-size: 8vw;
+        padding: 1vw 2vw;
+        margin: 0;
+    }
+    
+    .column-button #colored-text {
+        font-weight: bold;
+        background-image: linear-gradient(45deg,  var(--white-color), var(--blue-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        width: fit-content;
+        color: transparent;
+        margin: 0;
+        font-size: 8vw;
+    }
+
+
+
 
 }
 
@@ -389,8 +417,8 @@ box-shadow: inset 0 0 0 1px #0071F5
 }
 .center-tile p{
     color: var(--background-color);
-    font-size: 2vw;
-    font-weight: 500;
+    font-size: 3vw;
+    font-weight: 400;
     background-image: linear-gradient(45deg,  var(--background-color), var(--dark-blue-color));
     -webkit-background-clip: text;
     background-clip: text;
@@ -401,6 +429,19 @@ box-shadow: inset 0 0 0 1px #0071F5
 .center-tile button{
     margin: 0;
     margin-top: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+    .center-tile p{
+        font-size: 6vw;
+    }
+
+    .center-tile{
+        text-align: center;
+        padding: 7vw 10vw;
+        background-color: var(--light-blue);
+        background: linear-gradient(-20deg,  var(--light-blue), var(--light-blue-gradient));
+    }
 }
 
 
@@ -468,11 +509,7 @@ box-shadow: inset 0 0 0 1px #0071F5
     top: 50%;
     right: 30%; 
     transform: translate(50%, -50%);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    text-align: left;
 
     text-decoration: none;
     color: #ffffff;
@@ -480,9 +517,11 @@ box-shadow: inset 0 0 0 1px #0071F5
 }
 
 .scrollable-container h2{
+    width: 40vw;
+    text-align: left;
     text-decoration: none;
     color: #ffffff;
-    font-size: 4vw;
+    font-size: 2.5vw;
     margin: 0;
     padding: 1vw;
 }
@@ -500,7 +539,7 @@ box-shadow: inset 0 0 0 1px #0071F5
     }
 
     .scrollable-container h2{
-        font-size: 25px;
+        font-size: 4vw;
     }
 
 
@@ -519,13 +558,15 @@ box-shadow: inset 0 0 0 1px #0071F5
     z-index: 2;
   }
 
+
   .toggle-switch {
     position: relative;
-    width: 120px;
-    height: 60px;
-    border-radius: 30px;
+    width: 8vw;
+    height: 4vw;
+    border-radius: 2vw;
     cursor: pointer;
     margin-right: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.315);
   }
 
   #toggle-switch{
@@ -538,19 +579,20 @@ box-shadow: inset 0 0 0 1px #0071F5
     height: 0;
   }
 
+
   .toggle-switch-slider {
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 52px;
-    height: 52px;
+    top: 0.5vw;
+    left: 0.5vw;
+    width: 3vw;
+    height: 3vw;
     border-radius: 50%;
     background-color: #fff;
     transition: transform 0.3s ease-in-out;
   }
 
   .toggle-switch input:checked + .toggle-switch-slider {
-    transform: translateX(60px);
+    transform: translateX(4vw);
   }
 
   .toggle-text {
@@ -563,10 +605,10 @@ box-shadow: inset 0 0 0 1px #0071F5
 .toggle-line-container
 {
     background-color: var(--light-blue);
+
     position: relative;
-    height: 30vw;
+    height: fit-content;
     margin: auto;
-    overflow: hidden;
 }
 
 .multiple-tabs{
@@ -574,7 +616,7 @@ box-shadow: inset 0 0 0 1px #0071F5
     align-items: center;
     justify-content: center;
     color: var(--background-color);
-    height: 30vw;
+    height: fit-content;
 }
 
 .multiple-tabs h2{
@@ -620,6 +662,7 @@ box-shadow: inset 0 0 0 1px #0071F5
 #firms-side::after {
     content: "For Hiring Firms";
     text-align: center;
+    font-size: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -658,6 +701,7 @@ box-shadow: inset 0 0 0 1px #0071F5
 #recruiters-side::after {
     content: "For Recruiters";
     text-align: center;
+    font-size: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -680,56 +724,41 @@ box-shadow: inset 0 0 0 1px #0071F5
 }
 
 
+@media screen and (max-width: 768px) {
+    .multiple-tabs{
+        flex-direction: column;
+        padding: 2vw 4vw;
+    }
 
-#text-image-content p{
-    padding: 2vw;
-    padding-top: 1vw;
-    font-size: 1.5vw;
+    #firms-side.blur::after {
+        opacity: 0;
+    }
+
+    #recruiters-side.blur::after {
+
+        opacity: 0;
+    }
+
+    .toggle-switch-container {
+        display: none;
+      }
+
+    .multiple-tabs h2::after{
+        height: 2px;
+
+    }
+    .multiple-tabs h2{
+        font-size: 6vw;
+    }
+    .multiple-tabs p{
+        font-size: 5vw;
+    }
+    #firms-side{
+        padding-left: 2vw;
+    }
+    
+
 }
-
-
-#splitted_img {
-    width: 100vw;
-    height: 40vw;
-    background-color: var(--light-blue);
-    /*background-image: url("./media/split_image.jpg");
-    background-size: cover;   */ 
-    transition: all 0.5s ease-in-out;
-}
-
-#splitted_img.blurred {
-    filter: blur(50px);
-}
-
-#splitted_img.recruits{
-    float: left;
-    clip-path: polygon(0 0, 45% 0, 35% 100%, 0 100%);
-    shape-outside: polygon(0 0, 60% 0, 50% 100%, 0 100%);
-}
-
-#splitted_img.firms {
-    float: right;
-    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
-    shape-outside: polygon(47% 0%, 100% 0%, 100% 100%, 57% 100%);
-}
-
-
-.vertical-line {
-    position: absolute;
-    height: 60vw;
-    width: 8px;
-    background-color: var(--blue-color);
-    left: 50%;
-    top: -10vw;
-    transform: translate(-50%, -50%);
-    transform-origin: center;
-    transform: rotate(15deg);
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .tilted {
-    transform: rotate(-15deg);
-  }
 
 
 /* other */

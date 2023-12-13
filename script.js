@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const offset = section.offsetTop;
             const height = section.offsetHeight;
 
-            if (window.scrollY >= offset - 80 && window.scrollY < offset + height) {
+            if (window.scrollY >= offset - 120 && window.scrollY < offset + height) {
                 currentSectionId = section.id;
             }
         });

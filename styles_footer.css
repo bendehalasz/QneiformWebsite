@@ -1,0 +1,133 @@
+:root {
+    --blue-color: #0071F5;
+    --white-color: #F5F5F5;
+    --grey-color:  #b6b4b4;
+    --light-blue: #cfd8e2;
+    --light-blue-gradient: #8faccc;
+    --dark-blue-color: #004AA0;
+    --background-color: #030C1D;
+  }
+  
+footer{
+    padding: 0.5vw;
+    color: var(--light-blue-gradient);
+    background-color: var(--background-color);
+
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+}
+
+#footer-logo{
+    fill:  var(--light-blue-gradient);
+    width: 20vw;
+}
+
+footer svg{
+    height: 1vw;
+    fill: var(--light-blue-gradient);
+}
+
+footer svg:hover{
+    fill: var(--white-color);
+}
+
+
+
+.footer-links{
+    padding:   0 4vw;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-direction: column;
+    vertical-align: top;
+}
+
+.footer-links a{
+    color: var(--light-blue-gradient);
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 0.2vw;
+}
+
+footer p{
+    color: var(--light-blue-gradient);
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding: 0.2vw;
+}
+
+
+.footer-links a:hover{
+    color: var(--white-color);
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+}
+
+.icons a{
+    padding: 1vw;
+}
+
+.footer-contacts{
+    padding:   0 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+}
+
+.copyright-data{
+    text-align: center;
+}
+
+hr{
+    border: none;
+    height: 1.5px; 
+    background-color:var(--light-blue-gradient);
+    width: 75%;
+    opacity: 0.6;
+    border-radius: 1px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footer-logo{
+        width: 80vw;
+    }
+
+    footer svg{
+        width: 3vw;
+    }
+    
+    .footer-links{
+        padding:   0 4vw;
+        align-items: center;
+    }
+    
+    footer a{
+        font-size: 4vw;
+        padding: 0.2vw;
+    }
+    
+    footer p{
+        font-size: 4vw;
+        padding: 0.1vw;
+    }
+    
+}
