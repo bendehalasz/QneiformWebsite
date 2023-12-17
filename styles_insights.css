@@ -18,7 +18,9 @@
     padding: 8vw;
 }
 
-
+a{
+    text-decoration: none;
+}
 
 
 .card{
@@ -39,14 +41,16 @@
 }
 
 .card h2{
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     text-decoration: none;
     color: var(--background-color);
     padding: 0;
+    margin: 0.5vw;
 } 
 
 .card p{
-    font-size: 1vw;
+    margin: 0.5vw;
+    font-size: 1.1vw;
     text-decoration: none;
     color: var(--background-color);
     padding: 0;
@@ -78,15 +82,22 @@
     justify-content: center;
     background-color: var(--blue-color);
     border-radius: 1vw;
-    width: 5vw;
+    width: fit-content;
+    padding: 0 0.5vw;
     height: 2vw;
 }
 
 
 .card .type svg{
-    width: 1.6vw;
+    height: 1.2vw;
     fill: var(--white-color);
 }
+
+.card .type img{
+    height: 1.2vw;
+    fill: var(--white-color);
+}
+
 
 .card .type p{
     padding: 0.3vw;
@@ -102,7 +113,7 @@
 }
 
 .card .time svg{
-    width: 1.6vw;
+    height: 1.2vw;
     fill: var(--background-color);
 }
 
@@ -164,17 +175,32 @@
     
     
     .card .type svg{
-        width: 3vw;
-        fill: var(--white-color);
+        height: 3vw;
+    }
+
+    .card .type img{
+        height: 3vw;
+    }
+
+    .card .type{
+        padding: 0.2vw 3vw;
+    }
+
+    .card h2{
+        margin:  2vw 0
+    }
+
+    .card p{
+        margin:  2vw 0
     }
 
     .card .type p{
-        padding: 1vw;
+        padding: 3vw;
         color: var(--white-color);
     }
 
     .card .time svg{
-        width: 3vw;
+        height: 3vw;
         fill: var(--background-color);
     }
 
